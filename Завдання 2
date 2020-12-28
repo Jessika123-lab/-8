@@ -1,1 +1,36 @@
+import math
+def dobutok(vector,mnozhnik):
+    a = [el*mnozhnik for el in vector]
+    print('добуток = ',a)
+    return a
 
+def suma(vec1, vec2):
+    f=[]
+    for i in range(len(vec1)):
+        f+=[vec1[i]+vec2[i]]
+    print('сума= ',f)
+    return f
+
+def minus(vec1,vec2):
+    f=[]
+    for i in range(len(vec1)):
+        f+=[vec1[i]-vec2[i]]
+    print('віднімання= ', f)
+    return f
+
+n = int(input('Вимір вектора n = '))
+
+a = [float(input('A[{0}] = '.format(i)))for i in range(n)]
+print('a=',a)
+
+b = [float(input('B[{0}] = '.format(i)))for i in range(n)]
+print('b=',b)
+
+c = [float(input('C[{0}] = '.format(i)))for i in range(n)]
+print('c=',c)
+
+d1=dobutok(b,3)
+d2=dobutok(c,2)
+s=suma(d1,d2)
+m=minus(a,s)
+print(m)
